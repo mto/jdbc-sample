@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="jdbc-sample-1.0" author="hoangtm">
+        <createTable tableName="identities">
+            <column name="email" type="VARCHAR(50)" />
+            <column name="first_name" type="VARCHAR(50)" />
+            <column name="last_name" type="VARCHAR(50)" />
+            <column name="address" type="VARCHAR(255)"/>
+        </createTable>
+
+        <insert tableName="identities">
+            <column name="email">trump@whitehouse.com</column>
+            <column name="first_name">Trump</column>
+            <column name="last_name">Donald</column>
+        </insert>
+        <insert tableName="identities">
+            <column name="email">pence@whitehouse.com</column>
+            <column name="first_name">Mike</column>
+            <column name="last_name">Pence</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
